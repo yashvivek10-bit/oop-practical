@@ -1,0 +1,49 @@
+
+class Employee {
+    String name = "Yashvi";
+    String department = "IT";
+
+  
+    void displayDetails() {
+        System.out.println("Employee Details:");
+        System.out.println("Name: " + name);
+        System.out.println("Department: " + department);
+    }
+}
+
+
+class Manager extends Employee {
+    int teamSize = 5;
+    String project = "AI System";
+
+   
+    @Override
+    void displayDetails() {
+        System.out.println("Manager Details:");
+        System.out.println("Name: " + name);
+        System.out.println("Department: " + department);
+        System.out.println("Team Size: " + teamSize);
+        System.out.println("Project: " + project);
+    }
+}
+
+
+public class Main {
+    public static void main(String[] args) {
+
+       
+        Employee e = new Employee();
+        e.displayDetails();
+
+        System.out.println();
+
+        Manager m = new Manager();
+        m.displayDetails();
+
+        System.out.println();
+
+       
+        Employee ref = new Manager();  // reference of parent, object of child
+        ref.displayDetails(); // calls Manager's method
+    }
+}
