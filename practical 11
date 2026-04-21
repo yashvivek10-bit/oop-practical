@@ -2,20 +2,20 @@ import java.util.Scanner;
 
 public class College {
 
-    // Outer class data member
+   
     String collegeName;
 
-    // Constructor
+
     public College(String collegeName) {
         this.collegeName = collegeName;
     }
 
-    // Inner class
+   
     class Admission {
         String studentName;
         String course;
 
-        // Method to accept student details
+      
         public void acceptData() {
             Scanner sc = new Scanner(System.in);
 
@@ -26,7 +26,7 @@ public class College {
             course = sc.nextLine();
         }
 
-        // Method to display details
+      
         public void displayData() {
             System.out.println("\n--- Admission Details ---");
             System.out.println("College Name: " + collegeName); // accessing outer class variable
@@ -35,16 +35,16 @@ public class College {
         }
     }
 
-    // Main method
+ 
     public static void main(String[] args) {
 
-        // Create outer class object
+        
         College col = new College("SSASIT College");
 
-        // Create inner class object
+
         College.Admission adm = col.new Admission();
 
-        // Call methods
+       
         adm.acceptData();
         adm.displayData();
     }
